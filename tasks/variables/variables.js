@@ -1,23 +1,23 @@
 /**
  * TODO create variable named int and set value equal to 1
 */
-{var int = 1;}
+const int = 1;
 console.log('int =',int);
 
 /**
  *  TODO create variable named int2 and set value equal int plus 1
  */
-{var int2 = int + 1;}
+const int2 = int + 1;
 console.log('int2 =',int2);
 /**
  * TODO create variable named str and set value equal to "John"
  */
-let str = 'John';
+const str = 'John';
 console.log('str =' , str);
 /**
  * TODO create variable named str2 and set value equal str plus " Dou"
  */
-let str2 = str + ' ' +'Dou';
+const str2 = str + ' ' +'Dou';
 console.log('str2 =', str2);
 /**
  * TODO create variable named bool and set value equal to comparison of int and int2 variables
@@ -28,7 +28,7 @@ console.log('bool = ', bool);
 /**
  * TODO create variable named arr and set value array of numbers from 1 to 5
  */
-var arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5];
 console.log('arr =' , arr)
 /**
  * TODO create variable named fifth and set value as element of array with index 4
