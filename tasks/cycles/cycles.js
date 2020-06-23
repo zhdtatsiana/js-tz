@@ -13,17 +13,19 @@
 function calculateDiscount(redemption) {
   let discount;
 
-if (redemption>=0, redemption <=350){
-  discount = ('0%');
-} else if (redemption>=351, redemption <=1350){
-  discount = ('15%');
-} else if (redemption>=1351, redemption <=2700){
- discount = ('30%');
-} else if (redemption>=2701, redemption <=6500){
-  discount = ('45%');
+  if ((redemption >= 0 && redemption <= 350) || (typeof redemption === 'string')) {
+
+    discount = (0);
+  } else if (redemption >= 351 && redemption <= 1350) {
+    discount = (15);
+  } else if (redemption >= 1351 && redemption <= 2700) {
+    discount = (30);
+  } else if (redemption >= 2701 && redemption <= 6500) {
+    discount = (45);
+  }
+
+  return discount;
 }
-          
-      return discount;}
 console.log(calculateDiscount(1000));
 
 
@@ -31,35 +33,48 @@ console.log(calculateDiscount(1000));
  * implement factorial algorithm using for, while, do..while operators
  */
 
-  const i = 10; 
-  let x=1;
-  let y=1;
-  while (y<i){
-    x=x*y;  y++ ;
-}  console.log(x);
+{
+  const i = 10;
+  let x = 1;
+  let y = 1;
+  while (y < i) {
+    x = x * y;
+    y++;
+  }
+  console.log(x);
+}
 
-let x=1; 
-for (let y=1; y< 10;  y++)
-{ x=x*y;}
-console.log(x);
+{
+  let x = 1;
+  for (let y = 1; y < 10; y++) {
+    x = x * y;
+  }
+  console.log(x);
+}
 
-const i = 10; 
-let x=1;
-let y=1;
-do  {x=x*y;  y++} 
-while (y<i);
- console.log(x);
+{
+  const i = 10;
+  let x = 1;
+  let y = 1;
+  do {
+    x = x * y;
+    y++
+  }
+  while (y < i);
+  console.log(x);
+}
 
 /**
  * return concatenated string from an array of substring
  */
 
-  const substr = ["I", " love", " JS"];
-  let text = '';
-  for (let x in substr) {
-    text += substr[x];
-     } console.log(text);
-  
+const substr = ["I", " love", " JS"];
+let text = '';
+for (let b of substr) {
+  text += b;
+}
+console.log(text);
+
 
 /**
  * calculate a total of income of certain person
@@ -72,11 +87,12 @@ while (y<i);
     otherExpences: -300
   };
   let sum = 0;
-  let count =0
+  let count = 0
 
-  for (let x in personIncomes) {
-    sum += personIncomes[x];
-    } console.log (sum)
+  for (let n in personIncomes) {
+    sum += personIncomes[n];
+  }
+  console.log(sum)
 }
 
 module.exports = calculateDiscount;
