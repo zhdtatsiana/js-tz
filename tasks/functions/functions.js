@@ -90,11 +90,18 @@ console.log(getUser("John", "Dou", 42));
 
 function getTotalPath(path) {
 	let km = 0;
-	for (let a of path) { km += a.distance
-			};
+	for (let a of path) {
+		km += a.distance
+	};
 	return km;
-	}
-console.log(getTotalPath([{direction: "Kiyv - Minsk", distance: 567}, {direction: "Kiyv - Paris", distance: 2402}]));
+}
+console.log(getTotalPath([{
+	direction: "Kiyv - Minsk",
+	distance: 567
+}, {
+	direction: "Kiyv - Paris",
+	distance: 2402
+}]));
 
 /**
  * write a function that will calculate a discount considering the Amount
@@ -106,9 +113,9 @@ console.log(getTotalPath([{direction: "Kiyv - Minsk", distance: 567}, {direction
 
 
 
-function discountFunction(percentage) { 
-	return function(amount) {
-		return(amount - percentage * amount / 100); 
+function discountFunction(percentage) {
+	return function (amount) {
+		return (amount - percentage * amount / 100);
 	};
 }
 const discount10 = discountFunction(10);
@@ -128,10 +135,10 @@ const myObject = {
 	keys() {
 		for (let key in myObject) {
 			console.log(key);
-		  };
+		};
 	},
 	call() {
-		return('My name is '+this.name+' '+this.lastName+' and I am '+this.age+' years old. My best friend is '+ this.friends[2])
+		return ('My name is ' + this.name + ' ' + this.lastName + ' and I am ' + this.age + ' years old. My best friend is ' + this.friends[2])
 	}
 
 };
