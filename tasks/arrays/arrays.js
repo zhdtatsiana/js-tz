@@ -4,6 +4,8 @@
  * @return {Array} - char names
  */
 function getCharactersNames(chars) {
+    let charNames = chars.map(char => char.name);
+    return charNames;
 }
 
 /**
@@ -11,6 +13,9 @@ function getCharactersNames(chars) {
  * @param {Array} chars
  */
 function printCharacterNames(chars) {
+    chars.forEach(element => {
+        console.log(element.name);
+    });
 }
 
 /**
@@ -19,6 +24,8 @@ function printCharacterNames(chars) {
  * @return {Array} - non human characters
  */
 function getNonHumanCharacters(chars) {
+    let nharray = chars.filter(element => element.species != 'Human');
+    return nharray;
 }
 
 /**
@@ -27,6 +34,8 @@ function getNonHumanCharacters(chars) {
  * @return {Object} - Jerry object
  */
 function getJerryInfo(chars) {
+    let JerryInfo = chars.find(element => element.name == 'Jerry Smith');
+    return JerryInfo;
 }
 
 /**
@@ -35,6 +44,7 @@ function getJerryInfo(chars) {
  * @return {boolean}
  */
 function isAllHuman(chars) {
+    return (chars.every(element => element.species == 'Human'));
 }
 
 /**
@@ -43,6 +53,7 @@ function isAllHuman(chars) {
  * @return {boolean}
  */
 function isAnyFishPerson(chars) {
+    return (chars.some(element => element.type == "Fish-Person"));
 }
 
 /**
@@ -52,7 +63,13 @@ function isAnyFishPerson(chars) {
  */
 function minItem(arr) {
     //PLACE YOUR CODE HERE
+    let x = Math.min(...arr);
+    return (arr.indexOf(x));
 }
+
+
+
+
 
 module.exports = {
     getCharactersNames,
