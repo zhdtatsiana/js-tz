@@ -6,6 +6,16 @@
  */
 //put your code here
 
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
+}
 /**
  * implement class Student that extends Person with:
  * 1) property grade
@@ -13,9 +23,17 @@
  * 3) method getGrade that returns property grade
  */
 //put your code here
-
-const person = //create instance of class person
-const student = //create instance of class student
+class Student extends Person {
+    constructor(firstName, lastName, grade) {
+        super(firstName, lastName);
+        this.grade = grade;
+    }
+    getGrade() {
+        return this.grade;
+    }
+}
+const person = new Person('namehere', 'surname'); 
+const student = new Student ('namehere', 'surname', 'somegrade');
 
 module.exports = {
     person,
