@@ -32,8 +32,8 @@ class Student extends Person {
         return this.grade;
     }
 }
-const person = new Person('namehere', 'surname'); 
-const student = new Student ('namehere', 'surname', 'somegrade');
+const person = new Person('namehere', 'surname');
+const student = new Student('namehere', 'surname', 'somegrade');
 
 module.exports = {
     person,
